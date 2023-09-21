@@ -4,6 +4,7 @@
     --colorPrimario: #784d3c ;
     --blanco: #ffffff ;
     --negro: #000000 ; 
+    --gris: #d1d1d1 ;
 }
 
 html {
@@ -34,6 +35,7 @@ a {
 
 h1, h2, h3, h4 {
     font-family: var(--fuenteHeding);
+    line-height: 1.2;
 }
 
 h1 {
@@ -68,16 +70,21 @@ img {
 
 .header {
     background-image: url(/blogdecafe_inicio/img/banner.jpg);
-    height: 50rem;
+    height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    padding-top: 3rem;
 }
 
 .header__texto {
     text-align: center;
     color: var(--blanco);
     margin-top: 5rem;
+}
+
+.header__texto p {
+    padding: 0 4.5rem;
 }
 
 @media (max-width: 768px) {
@@ -89,7 +96,7 @@ img {
 
 @media (min-width: 768px) {
     .header__texto {
-        margin-top: 10rem;
+        margin-top: 20rem;
     }
 }
 
@@ -132,4 +139,97 @@ img {
 .navegacion__enlace:hover {
     background-color: rgba(0, 0, 0, .5);
     transition: ease-in .2s;
+}
+
+/* contenido principal */
+
+@media (min-width: 768px) {
+    .contenido-principal {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 3rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.boton {
+    display: block;
+    font-family: var(--fuenteHeding);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    transition: ease-in .1s;
+    
+}
+
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+
+.boton__primario {
+    background-color: var(--negro);
+}
+
+.boton__primario:hover {
+    background-color: var(--colorPrimario);
+    transition: ease-in .1s;
+}
+
+.boton__secundario {
+    background-color: var(--colorPrimario);
+}
+
+.boton__secundario:hover {
+    background-color: var(--negro);
+    transition: ease-in .1s;
+}
+
+.cursos {
+    list-style: none;
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type {
+    border: none;
+    margin-bottom: none;
+}
+.widget-curso__label {
+    font-family: var(--fuenteHeding);
+    font-weight: 700;
+    font-size: 2rem;
+}
+.widget-curso__info {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--negro);
+    height: auto;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+
 }
