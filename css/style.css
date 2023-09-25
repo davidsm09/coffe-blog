@@ -172,6 +172,7 @@ img {
     font-weight: 700;
     margin-bottom: 2rem;
     transition: ease-in .1s;
+    border: none;
     
 }
 
@@ -184,11 +185,13 @@ img {
 
 .boton__primario {
     background-color: var(--negro);
+    cursor: pointer;
 }
 
 .boton__primario:hover {
     background-color: var(--colorPrimario);
     transition: ease-in .1s;
+    cursor: pointer;
 }
 
 .boton__secundario {
@@ -266,4 +269,42 @@ img {
 
 .curso:last-of-type {
     border: none;
+}
+
+/* contacto */
+
+.contacto-background {
+    background-image: url(/blogdecafe_inicio/img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -7rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+    box-shadow: 0px 30px 44px -16px rgba(0,0,0,0.75);
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field {
+flex: 1;
+border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 17rem;
+    margin-bottom: 3rem;
 }
