@@ -68,6 +68,14 @@ img {
 
 /* header */
 
+.webp .header{
+    background-image: url(/blogdecafe_inicio/img/banner.webp);
+}
+
+.nowebp .header {
+    background-image: url(/blogdecafe_inicio/img/banner.jpg)
+}
+
 .header {
     background-image: url(/blogdecafe_inicio/img/banner.jpg);
     height: 60rem;
